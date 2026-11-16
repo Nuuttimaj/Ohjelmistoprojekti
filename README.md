@@ -10,8 +10,18 @@ CSS - Milla
 JavaScript - Sami
 Flask - Leevi
 
+**Ohjeita**
+Pohjat kansioon voi tallentaa pohjan esim. css tai html tiedostolle.
 
 
+
+
+
+
+
+
+
+## Pelin kulku
 
 **Menu**
 Toiminnallisuudet:
@@ -19,7 +29,6 @@ start - aloittaa pelin/ vie prologiin
 info - printtaa tiedot
 load - ehkä
 quit - shutdown
-
 
 **Prologue**
 Tekstiä, jotain hienoo
