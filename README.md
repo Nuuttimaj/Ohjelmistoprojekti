@@ -2,4 +2,4 @@
 
 **Ohjelmointiprojekti**
 
-Leevi Luukkonen, Nuutti Majoinen, Sami Malmström, Milla Sundell
+Leevi Luukkonen, Nuutti Majoinen, Sami Malmsten, Milla Sundell
