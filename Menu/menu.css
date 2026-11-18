@@ -1,7 +1,12 @@
 body{
-    font: 100;
+  background-image: url(cave.avif);
+  animation: moveIt 10s linear infinite;
 }
 
+@keyframes moveIt {
+  from {background-position: center right;}
+  to {background-position: center left;}
+}
 .content{
     font: 100;
 }
