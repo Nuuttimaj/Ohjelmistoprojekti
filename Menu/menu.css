@@ -2,11 +2,15 @@ body{
     font: 100;
 }
 
-.otsikko{
+.content{
     font: 100;
 }
 
-.nappulat{
+.header{
+    font: 100;
+}
+
+.buttons{
     font: 100;
 }
 
