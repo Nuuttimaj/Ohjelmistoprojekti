@@ -13,14 +13,6 @@ Flask - Leevi
 **Ohjeita**
 Pohjat kansioon voi tallentaa pohjan esim. css tai html tiedostolle.
 
-
-
-
-
-
-
-
-
 ## Pelin kulku
 
 **Menu**
@@ -38,6 +30,23 @@ Kuva
 Hahmo
 Dialogia, niihin vastausnappulat?
 Aseen valinta
+
+**Pelaaja kaapataan**
+tausta sama kuin goblin fightissa / luolassa
+Dialogia
+ja printataan sanomalehti, jossa:
+
+---
+
+## --THE LOCAL DUNGEON RELEASING TOXINS TO LAKES--
+
+A local Goblin master is running an illegal ge-
+nerator in the dungeon which releases toxins
+to the nearby lake. Villagers have been...
+
+---
+
+.... Rest of the page was torn.
 
 **Goblin fight**
 Tausta
@@ -75,9 +84,3 @@ Tekstiä
 
 **Death**
 You died, kopioidaan dark souls
-
-
-
-
-
-
