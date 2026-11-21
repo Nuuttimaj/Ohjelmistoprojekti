@@ -1,36 +1,45 @@
-body{
+body {
   background-image: url(cave.avif);
   animation: moveIt 10s linear infinite;
+  text-align: center;
 }
 
 @keyframes moveIt {
-  from {background-position: center right;}
-  to {background-position: center left;}
+  from {
+    background-position: center right;
+  }
+  to {
+    background-position: center left;
+  }
 }
-.content{
-    font: 100;
-}
-
-.header{
-    font: 100;
-}
-
-.buttons{
-    font: 100;
-}
-
-.start{
-    font: 100;
+.content {
+  font: 100;
+  background-color: aliceblue;
+  display: inline-block;
+  border: 1px;
+  text-align: center;
 }
 
-.info{
-    font: 100;
+.header {
+  font: 100;
 }
 
-.load{
-    font: 100;
+.buttons {
+  font: 100;
 }
 
-.quit{
-    font: 100;
+.start {
+  font: 100;
+}
+
+.info {
+  font: 100;
+}
+
+.load {
+  font: 100;
+}
+
+.quit {
+  font: 100;
 }
