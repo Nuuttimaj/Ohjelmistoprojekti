@@ -1,5 +1,64 @@
-import sys # sys.exittiä varten
-import time # time.sleeppiä varten
+from flask import Flask, render_template, request, jsonify
+import json
+from weapons import Weapon # ase luokka
+from monsters import Monster # monsteri luokka
+from room import Room # huone luokka
+from PlayerInfo import Player # pelaaja luokka
+
+app = Flask(__name__)
+
+PelinTilanne = {}
+
+def dungeon():
+    sword = Weapon("Sword", 6, 4)
+    goblin = Monster("Goblin", 20, 5)
+    ggoblin = Monster("Giant Goblin", 50, 10)
+    mgoblin = Monster("Goblin Master", 100, 30)
+
+    level0Start = Room("Fields", "A peaceful spot under a tree")
+    level0End = Room("Fields", "You see Gratos waving at you...")
+    level1Center = Room("Starting place", "A dark dungeon crossroads.")
+    level1Left = Room("Left from the starting place", "A damp stone corridor.")
+    level1Right = Room("Right from the starting place", "An old armory hallway.")
+    level1Behind = Room("A huge staircase leads down", "A massive spiral staircase.")
+    level2Center = Room("Generator room", "A noisy coal generator pollutes the air.")
+    level3Center = Room("The Goblin Master room", "A throneroom full of gold and diamonds.")
+
+    level1Center.add_exit("left", level1Left)
+    level1Center.add_exit("right", level1Right)
+    level1Center.add_exit("behind", level1Behind)
+    level1Left.add_exit("forward", level2Center)
+    level1Right.add_exit("forward", level2Center)
+    level1Behind.add_exit("forward", level2Center)
+    level2Center.add_exit("forward", level3Center)
+    level3Center.add_exit("forward", level0End)
+
+    level1Center.monster = goblin
+    level1Left.monster = ggoblin
+    level1Right.monster = ggoblin
+    level1Behind.monster = ggoblin
+    level3Center.monster = mgoblin
+
+    item_collected = False
+
+PelinTilanne.clear()
+PelinTilanne.update({
+    "vaihe": "age",
+    "pelaaja": Player("Unknown", 0, 100, 0, inventory=[]),
+    "Gratos": Player("Gratos", 158, 200, 30, inventory=[]),
+    "weapon": sword,
+    "current_room": level0Start,
+    "gratos_joined": False,
+    "rooms": {
+        "fields": level0Start,
+        "starting place": level1Center,
+        "Left from starting place": level1Left,
+    }
+})
+
+# TÄMÄ KOODI KÄÄNNETÄÄN FLASKIKSI
+import sys # sys.exittiä varten | EI TARVITA TÄSSÄ
+import time # time.sleeppiä varten | EI TARVITA TÄSSÄ
 from weapons import Weapon # ase luokka
 from monsters import Monster # monsteri luokka
 from room import Room # huone luokka
