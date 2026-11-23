@@ -9,9 +9,11 @@
   </head>
 
   <body>
+    <input type="button" value="PLAY" onclick="play()">
+
     <!-- Audio -->
-    <audio autoplay loop>
-      <source src="testi.mp3" />
+    <audio id="audio" loop>
+      <source src="menu.mp3" />
     </audio>
 
     <!-- All content -->
@@ -20,10 +22,8 @@
 
       <!-- Buttons -->
       <div class="Buttons">
-        <p class="start" id="menu_start">
-          <a href="/Prologue/prologue.html">Start </a>
-        </p>
-        <p class="load" id="menu_load">Load</p>
+      <button class="start" id="menu_start"><a href="../Prologue/prologue.html">Start</a></button>
+      <button class="load" id="menu_load">Load</button>
       </div>
     </div>
   </body>
