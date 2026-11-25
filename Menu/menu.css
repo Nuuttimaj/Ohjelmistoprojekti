@@ -1,9 +1,13 @@
+
 body {
+  /* tää vaihetaan - taustakuva */
   background-image: url(cave.avif);
-  animation: moveIt 10s linear infinite;
+  /* animation speed */
+  animation: moveIt 15s linear infinite;
   text-align: center;
 }
 
+/* animation - move */
 @keyframes moveIt {
   from {
     background-position: center right;
@@ -12,28 +16,46 @@ body {
     background-position: center left;
   }
 }
+
+/* MENU box */
 .content {
-  font: 100;
-  background-color: aliceblue;
-  display: inline-block;
-  border: 1px;
-  text-align: center;
+  background-color: rgba(112, 102, 102, 0.37);
+  padding: 30px;
+  border-color: black;
+  border-style: solid;
+  border-width: 5px;
+  width: 500px;
+  justify-content: center;
+  justify-self: center;
 }
 
+/*  the dungeon text*/
 .header {
-  font: 100;
+  display: flex;
+  justify-self: center;
+  font: 100px;
+  color: black;
 }
 
+.buttons:hover {box-shadow:0 8px 16px 0 rgba(0,0,0,0.6)}
+
+/* start, load - box */
 .buttons {
-  font: 100;
+  display: flex;
+  font: 100px;
+  justify-self: center;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
 }
 
-.start {
-  font: 100;
-}
+/* start, load texts */
+/* .text {
+  display: flex;
+  font: 200;
+  padding: 10px;
+  text-decoration: inherit;
+  width: 100px;
+  background-color: white;
+} */
 
-.load {
-  font: 100;
-}
-
-/* testi kommentti */
