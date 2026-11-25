@@ -4,6 +4,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Combat</title>
+    <link rel="stylesheet" href="combat.css" />
+
+    <script src="monster.js" defer></script>
+    <script src="player.js" defer></script>
+    <script src="weapon.js" defer></script>
+    <script src="combat.js" defer></script>
   </head>
-  <body></body>
+
+  <body>
+    <main>
+      <img
+        class="goblinPic"
+        src="goblin.png"
+        alt="Hemogoblin"
+        onclick="attack()"
+      />
+
+      <p id="status-text">Click the goblin to kill that mf.</p>
+      <p>
+        Konsoliin tulee ilmoitus, mutta tuo herttanen otus ei ota damagee viel
+      </p>
+
+      <!-- Tämä sitten kun pelaaja on päihittänyt goblinin -->
+      <button
+        class="button"
+        id="continue-btn"
+        onclick="nextRoom()"
+        style="display: none"
+      >
+        Continue
+      </button>
+
+      <!-- Tämä jos pelaaja kuolee -->
+      <button
+        class="button"
+        id="menu-btn"
+        onclick="menu()"
+        style="display: none"
+      >
+        Back to main menu
+      </button>
+    </main>
+  </body>
 </html>

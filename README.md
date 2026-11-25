@@ -34,19 +34,7 @@ Aseen valinta
 **Pelaaja kaapataan**
 tausta sama kuin goblin fightissa / luolassa
 Dialogia
-ja printataan sanomalehti, jossa:
-
----
-
-## --THE LOCAL DUNGEON RELEASING TOXINS TO LAKES--
-
-A local Goblin master is running an illegal ge-
-nerator in the dungeon which releases toxins
-to the nearby lake. Villagers have been...
-
----
-
-.... Rest of the page was torn.
+ja printataan sanomalehti, jossa annetaan pelaajan tavoite
 
 **Goblin fight**
 Tausta

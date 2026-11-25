@@ -1,0 +1,13 @@
+body {
+  text-align: center;
+}
+
+img {
+  display: block;
+  margin: auto;
+}
+
+.goblinPic {
+  width: 500px;
+  height: 400px;
+}
