@@ -15,10 +15,21 @@ function menu() {
   window.location.href = "/Menu/menu.html";
 }
 
-function combatStatus() {
-  console.log(`Player HP: ${player.HP} and ${goblin.name} HP: ${goblin.HP}`);
-}
-
 function attack() {
-  console.log(`Player HP: ${player.HP} and ${goblin.name} HP: ${goblin.HP}`);
+  if (sword.Hit()) {
+    const isDefeated = goblin.takeDamage(sword.damage);
+    console.log(`${goblin.name} took damage, Goblin HP is now: ${goblin.HP}`);
+    if (isDefeated) {
+      console.log("Äijä delas");
+      document.getElementById("continue-btn").style.display = "";
+      return;
+    }
+  } else {
+    const PlayerDefeat = player.takeDamage(goblin.deals);
+    console.log(`You swing your sword but missed! Player HP: ${player.HP}`);
+    if (PlayerDefeat) {
+      console.log("Ai mun olkapää! Kuolit");
+      document.getElementById("menu-btn").style.display = "";
+    }
+  }
 }
